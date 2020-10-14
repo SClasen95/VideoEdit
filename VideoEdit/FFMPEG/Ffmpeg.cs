@@ -32,16 +32,12 @@ namespace VideoEdit.FFMPEG
         {
             var cmd = $"ffmpeg -i \"{rutaVideoCargado}\" -vf scale={Utilidades.reemplazarCaracter(resolucionNueva,'x',':')} \"{Utilidades.conseguirRuta(rutaVideoCargado)}\\{Utilidades.extraerNombre(rutaVideoCargado)} ({resolucionNueva}).{Utilidades.extraerFormato(rutaVideoCargado)}\"";
             abrirConsola(cmd);
-            Console.WriteLine(cmd);
         }
 
         public static void cambiarFormato(String formatoNuevo)
-        {
-            
+        {            
             var cmd = $"ffmpeg -i \"{rutaVideoCargado}\" \"{Utilidades.removerFormato(rutaVideoCargado)}.{formatoNuevo}\"";
-
             abrirConsola(cmd);
-            Console.WriteLine(cmd);
         }
         
         public static void extraerAudio()
@@ -59,7 +55,6 @@ namespace VideoEdit.FFMPEG
         {
 
             var cmd = $"ffmpeg -i \"{rutaVideoCargado}\" -r {Utilidades.reemplazarCaracter(t,',','.')} \"{Utilidades.conseguirRuta(rutaVideoCargado)}\\{Utilidades.extraerNombre(rutaVideoCargado)} (%04d).png\"";
-            Console.WriteLine(Utilidades.reemplazarCaracter(t, ',', '.'));
             abrirConsola(cmd);
         }
         
