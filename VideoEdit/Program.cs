@@ -6,16 +6,13 @@ using System.Windows.Forms;
 using VideoEdit.DAOs;
 using VideoEdit.FFMPEG;
 
-namespace VideoEdit
-{
-    static class Program
-    {
+namespace VideoEdit {
+    static class Program {
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
         [STAThread]
-        static void Main()
-        {
+        static void Main() {
             UsuariosDAO.iniciar();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);

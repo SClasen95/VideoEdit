@@ -9,24 +9,19 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using VideoEdit.FFMPEG;
 
-namespace VideoEdit.Vistas
-{
-    public partial class Imagenes : Form
-    {
-        public Imagenes()
-        {
+namespace VideoEdit.Vistas {
+    public partial class Imagenes : Form {
+        public Imagenes() {
             InitializeComponent();
         }
 
-        private void btnAccept_Click(object sender, EventArgs e)
-        {
+        private void btnAccept_Click(object sender, EventArgs e) {
             var result = this.numScroll.Text;
             Ffmpeg.extraerImagenes(result);
             this.Close();
         }
 
-        private void btnCancel_Click(object sender, EventArgs e)
-        {
+        private void btnCancel_Click(object sender, EventArgs e) {
             this.Close();
         }
 
