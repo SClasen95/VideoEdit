@@ -4,19 +4,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using RestSharp;
 
 namespace VideoEdit.DAOs {
-    class UsuariosDAO {
-        private static List<Usuario> usuarios = new List<Usuario>();
-        public static void iniciar() {
-            usuarios.Add(new Usuario("Simon", "123"));
-            usuarios.Add(new Usuario("admin", "admin"));
-            usuarios.Add(new Usuario("pepito", "gomez"));
-        }
+    static class UsuariosDAO {
+        static RestClient client = new RestClient("https://localhost:44371/");
 
-
-        public static bool existeUsuario(String usuario, String contraseña) {
-            return usuarios.Find(user => user.nombreUsuario == usuario && user.contraseña == contraseña) != null;
+        public static Boolean login(String usuario, String contraseña) {
+            var req = new RestRequest($"API/Login?nombre={usuario}&contraseña={contraseña}");            
+            req.RequestFormat = DataFormat.Json;
+            var respuesta = client.Get(req).Content;
+            Console.WriteLine(respuesta);
+            return respuesta.Equals("\"true\"");
         }
     }
 }

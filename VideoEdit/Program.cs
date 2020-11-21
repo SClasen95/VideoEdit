@@ -13,7 +13,6 @@ namespace VideoEdit {
         /// </summary>
         [STAThread]
         static void Main() {
-            UsuariosDAO.iniciar();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new FormLogin());

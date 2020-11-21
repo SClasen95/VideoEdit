@@ -34,8 +34,12 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="RestSharp, Version=106.11.7.0, Culture=neutral, PublicKeyToken=598062e77f915f75, processorArchitecture=MSIL">
+      <HintPath>..\packages\RestSharp.106.11.7\lib\net452\RestSharp.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -49,7 +53,6 @@
   <ItemGroup>
     <Compile Include="DAOs\UsuariosDAO.cs" />
     <Compile Include="FFMPEG\Ffmpeg.cs" />
-    <Compile Include="Modelo\Usuario.cs" />
     <Compile Include="Modelo\Utilidades.cs" />
     <Compile Include="Vistas\Editor.cs">
       <SubType>Form</SubType>
@@ -107,6 +110,7 @@
     <EmbeddedResource Include="Vistas\Resolution.resx">
       <DependentUpon>Resolution.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

@@ -17,3 +17,6 @@ C:\Users\Simon\source\repos\VideoEdit\VideoEdit\obj\Debug\AxInterop.WMPLib.dll
 C:\Users\Simon\source\repos\VideoEdit\VideoEdit\obj\Debug\VideoEdit.csproj.ResolveComReference.cache
 C:\Users\Simon\source\repos\VideoEdit\VideoEdit\obj\Debug\VideoEdit.Vistas.Resolution.resources
 C:\Users\Simon\source\repos\VideoEdit\VideoEdit\obj\Debug\VideoEdit.Vistas.Imagenes.resources
+C:\Users\Simon\source\repos\VideoEdit\VideoEdit\bin\Debug\RestSharp.dll
+C:\Users\Simon\source\repos\VideoEdit\VideoEdit\bin\Debug\RestSharp.xml
+C:\Users\Simon\source\repos\VideoEdit\VideoEdit\obj\Debug\VideoEdit.csproj.CopyComplete

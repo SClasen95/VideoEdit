@@ -20,7 +20,7 @@ namespace VideoEdit
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            if (UsuariosDAO.existeUsuario(txtUsername.Text,txtPassword.Text)){
+            if (UsuariosDAO.login(this.txtUsername.Text, this.txtPassword.Text)){
                 var form = new FormPrograma(this);
                 form.Show();
                 this.Hide();
