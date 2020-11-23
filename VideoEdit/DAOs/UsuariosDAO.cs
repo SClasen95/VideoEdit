@@ -14,7 +14,6 @@ namespace VideoEdit.DAOs {
             var req = new RestRequest($"API/Login?nombre={usuario}&contraseña={contraseña}");            
             req.RequestFormat = DataFormat.Json;
             var respuesta = client.Get(req).Content;
-            Console.WriteLine(respuesta);
             return respuesta.Equals("\"true\"");
         }
     }

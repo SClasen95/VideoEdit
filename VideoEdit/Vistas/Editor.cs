@@ -85,8 +85,7 @@ namespace VideoEdit {
                     cambiarFormato();
                     break;
                 default:
-                    break;
-                    
+                    break;                    
             }
         }*/
 
